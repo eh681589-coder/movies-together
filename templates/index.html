@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0f0c29">
+  <title>🎬 Кино вдвоём</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="page-center">
+    <div class="container">
+      <div class="logo">🎬</div>
+      <h1>Кино вдвоём</h1>
+      <p class="sub">Смотрите фильмы вместе, где бы вы ни были</p>
+
+      <button class="btn primary" id="createBtn">Создать комнату</button>
+
+      <div class="divider"><span>или</span></div>
+
+      <input id="codeInput" placeholder="Код комнаты" maxlength="6" autocomplete="off">
+      <button class="btn" id="joinBtn">Войти</button>
+
+      <p id="error" class="error"></p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
